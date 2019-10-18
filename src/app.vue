@@ -1,25 +1,16 @@
 <template>
   <div>
-    <input type="text" v-model="name">
-    <p>{{name}}</p>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'index.vue',
-    data(){
-      return{
-        name:'张三'
-      }
-    },
+    name: 'app'
   };
 </script>
 
 <style scoped>
-  input{
-    width: 100px;
-    height: 40px;
-    border: 2px solid #ededed;
-  }
 </style>
